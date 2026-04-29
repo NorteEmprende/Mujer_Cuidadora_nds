@@ -1,0 +1,115 @@
+/* ============================================
+   RESPONSIVE.CSS
+   Media queries generales y ajustes responsive
+   ============================================ */
+
+/* === Tablet (1024px) === */
+@media (max-width: 1024px) {
+    :root {
+        --space-4xl: 4rem;
+        --space-3xl: 3rem;
+    }
+
+    .grid-auto {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* === Tablet pequeña (768px) === */
+@media (max-width: 768px) {
+    :root {
+        --space-4xl: 3rem;
+        --space-3xl: 2.5rem;
+    }
+
+    html {
+        scroll-padding-top: var(--header-height-mobile);
+    }
+
+    .grid-auto {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: var(--space-md);
+    }
+
+    .section__header {
+        margin-bottom: var(--space-2xl);
+    }
+
+    /* Ocultar decoraciones no esenciales */
+    .hero__decoration--dots {
+        display: none;
+    }
+}
+
+/* === Móvil (480px) === */
+@media (max-width: 480px) {
+    :root {
+        --space-4xl: 2.5rem;
+        --space-3xl: 2rem;
+    }
+
+    .grid-auto {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: var(--space-lg);
+    }
+
+    .municipality-card {
+        padding: var(--space-lg);
+    }
+
+    .section__title::after {
+        width: 40px;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__actions .btn {
+        justify-content: center;
+    }
+
+    .incentivo-card {
+        padding: var(--space-md);
+    }
+
+    .incentivo-card__amount {
+        font-size: 1.5rem;
+    }
+}
+
+/* === Pantalla grande (1400px+) === */
+@media (min-width: 1400px) {
+    .container {
+        padding-left: var(--space-xl);
+        padding-right: var(--space-xl);
+    }
+}
+
+/* === Print === */
+@media print {
+    .site-header,
+    .site-nav__toggle,
+    .site-nav__overlay,
+    .hero__decoration {
+        display: none !important;
+    }
+
+    .section {
+        padding: 1rem 0;
+        break-inside: avoid;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

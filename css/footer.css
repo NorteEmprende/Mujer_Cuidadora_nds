@@ -1,0 +1,151 @@
+/* ============================================
+   FOOTER.CSS
+   Footer institucional
+   ============================================ */
+
+.site-footer {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #3D1D6E 100%);
+    color: rgba(255, 255, 255, 0.85);
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+}
+
+.site-footer__inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-3xl);
+    margin-bottom: var(--space-3xl);
+}
+
+/* Info principal */
+.site-footer__brand {
+    max-width: 360px;
+}
+
+.site-footer__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: var(--space-lg);
+}
+
+.site-footer__logo-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.15);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.site-footer__desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: var(--space-lg);
+}
+
+/* Logos institucionales */
+.site-footer__logos {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-footer__logo-placeholder {
+    width: 80px;
+    height: 50px;
+    background: rgba(255,255,255,0.1);
+    border: 1px dashed rgba(255,255,255,0.2);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: var(--space-xs);
+}
+
+/* Columnas de navegación */
+.site-footer__col h4 {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: var(--space-lg);
+}
+
+.site-footer__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.site-footer__nav-link {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+    transition: color var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.site-footer__nav-link:hover {
+    color: white;
+}
+
+/* Contacto */
+.site-footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: var(--space-md);
+}
+
+.site-footer__contact-icon {
+    font-size: 1rem;
+    margin-top: 2px;
+}
+
+/* Barra inferior */
+.site-footer__bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.site-footer__copy {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+}
+
+.site-footer__credit {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+}
+
+@media (max-width: 768px) {
+    .site-footer__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .site-footer__bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

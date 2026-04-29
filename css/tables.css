@@ -1,0 +1,122 @@
+/* ============================================
+   TABLES.CSS
+   Tablas informativas estáticas y responsive
+   ============================================ */
+
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    background: var(--color-bg-white);
+}
+
+.priority-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.priority-table thead {
+    background: linear-gradient(135deg, var(--color-primary), #6B3FA0);
+}
+
+.priority-table th {
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    color: var(--color-text-light);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.88rem;
+    white-space: nowrap;
+}
+
+.priority-table td {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border-soft);
+    color: var(--color-text-gray);
+    vertical-align: middle;
+}
+
+.priority-table tbody tr {
+    transition: background-color var(--transition-fast);
+}
+
+.priority-table tbody tr:hover {
+    background-color: var(--color-lila-bg);
+}
+
+.priority-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.priority-table__score {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--color-lila-bg);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.priority-table__score--high {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+/* Tabla de distribución por municipio */
+.distribution-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.distribution-table thead {
+    background: var(--color-primary);
+}
+
+.distribution-table th {
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+.distribution-table td {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border-soft);
+    color: var(--color-text-gray);
+}
+
+.distribution-table tbody tr:hover {
+    background-color: var(--color-lila-bg);
+}
+
+.distribution-table tfoot {
+    background: var(--color-lila-bg);
+}
+
+.distribution-table tfoot td {
+    font-weight: 600;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    .priority-table th,
+    .priority-table td,
+    .distribution-table th,
+    .distribution-table td {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.85rem;
+    }
+}

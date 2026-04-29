@@ -1,0 +1,18 @@
+/* ============================================
+   MAIN.CSS
+   Archivo índice - solo importaciones
+   ============================================ */
+
+@import url('./variables.css');
+@import url('./fonts.css');
+@import url('./reset.css');
+@import url('./layout.css');
+@import url('./header.css');
+@import url('./hero.css');
+@import url('./sections.css');
+@import url('./cards.css');
+@import url('./tables.css');
+@import url('./buttons.css');
+@import url('./placeholders.css');
+@import url('./footer.css');
+@import url('./responsive.css');

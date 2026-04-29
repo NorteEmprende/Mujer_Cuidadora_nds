@@ -1,0 +1,80 @@
+/* ============================================
+   VARIABLES.CSS
+   Sistema de tokens de diseño del proyecto
+   ============================================ */
+
+:root {
+    /* === Colores principales === */
+    --color-primary: #522989;
+    --color-primary-light: #C098FB;
+    --color-primary-rgb: 82, 41, 137;
+    --color-primary-light-rgb: 192, 152, 251;
+
+    /* === Colores complementarios === */
+    --color-lila-bg: #F5EEFF;
+    --color-warm-white: #FFFBF7;
+    --color-accent-fucsia: #D7197F;
+    --color-accent-fucsia-rgb: 215, 25, 127;
+
+    /* === Texto === */
+    --color-text-dark: #2B2433;
+    --color-text-gray: #625A6D;
+    --color-text-light: #FFFFFF;
+
+    /* === Bordes y fondos === */
+    --color-border-soft: #E8DDF7;
+    --color-bg-white: #FFFFFF;
+    --color-bg-section-alt: #FAF7FF;
+
+    /* === Estados === */
+    --color-success: #3BAA75;
+    --color-warning: #F6B84B;
+
+    /* === Espaciados === */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+
+    /* === Radios === */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 50%;
+
+    /* === Sombras === */
+    --shadow-sm: 0 1px 3px rgba(82, 41, 137, 0.06);
+    --shadow-md: 0 4px 12px rgba(82, 41, 137, 0.08);
+    --shadow-lg: 0 8px 30px rgba(82, 41, 137, 0.12);
+    --shadow-xl: 0 12px 40px rgba(82, 41, 137, 0.16);
+    --shadow-card: 0 2px 16px rgba(82, 41, 137, 0.07);
+    --shadow-card-hover: 0 8px 32px rgba(82, 41, 137, 0.14);
+
+    /* === Tamaños máximos === */
+    --max-width-content: 1200px;
+    --max-width-narrow: 900px;
+    --max-width-wide: 1400px;
+
+    /* === Z-index === */
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-overlay: 300;
+    --z-modal: 400;
+    --z-toast: 500;
+
+    /* === Transiciones === */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* === Header === */
+    --header-height: 72px;
+    --header-height-mobile: 60px;
+}

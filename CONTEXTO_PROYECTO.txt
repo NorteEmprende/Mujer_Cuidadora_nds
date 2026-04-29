@@ -1,0 +1,277 @@
+﻿====================================================
+CONTEXTO_PROYECTO.txt
+GUIA INTERNA PARA FUTURAS EDICIONES CON IA
+====================================================
+Este archivo NO es contenido visible para usuarios.
+Este archivo es una guia interna para IA y desarrolladores.
+
+====================================================
+1. NOMBRE DEL PROYECTO
+====================================================
+Fortalecimiento productivo a mujeres cuidadoras de poblacion en condicion de discapacidad y adultos mayores en los municipios de Chinacota, Ragonvalia, Salazar, Abrego y Ocana del departamento Norte de Santander.
+
+====================================================
+2. RESUMEN DEL PROYECTO
+====================================================
+Proyecto orientado a fortalecer las capacidades productivas y economicas de mujeres cuidadoras, mediante formacion, acompanamiento e incentivos productivos.
+
+====================================================
+3. PRESENTACION DEL PROBLEMA
+====================================================
+La mujer cuidadora ha sido historicamente invisibilizada y subvalorada. En zonas rurales de Norte de Santander, la falta de acceso a servicios, empleo y redes de apoyo institucional acentua esta situacion.
+
+====================================================
+4. PUBLICO OBJETIVO
+====================================================
+- Mujeres cuidadoras de 18 a 65 anos
+- Cuidadoras de poblacion en condicion de discapacidad
+- Cuidadoras de adultos mayores
+- Residentes en: Chinacota, Ragonvalia, Salazar, Abrego, Ocana
+- Con emprendimiento o idea de negocio
+- Con disposicion para formacion y acompanamiento
+
+====================================================
+5. MUNICIPIOS PRIORIZADOS
+====================================================
+Chinacota, Ragonvalia, Salazar, Abrego, Ocana
+
+====================================================
+6. DISTRIBUCION DE BENEFICIARIAS
+====================================================
+- Salazar: 10
+- Chinacota: 20
+- Ragonvalia: 10
+- Abrego: 25
+- Ocana: 45
+- Total: 110
+
+====================================================
+7. OBJETIVO GENERAL
+====================================================
+Fortalecer las capacidades productivas y economicas de mujeres cuidadoras de poblacion en condicion de discapacidad y adultos mayores en los municipios de Chinacota, Ragonvalia, Salazar, Abrego y Ocana, mediante el desarrollo de iniciativas productivas sostenibles que contribuyan a su autonomia economica y al mejoramiento de su calidad de vida.
+
+====================================================
+8. OBJETIVOS ESPECIFICOS
+====================================================
+1. Promocion y socializacion del proyecto.
+2. Fortalecimiento de capacidades y competencias tecnicas.
+3. Entrega de incentivos productivos segun planes de negocio.
+4. Seguimiento, monitoreo, mentoria y asesoria personalizada.
+5. Acciones logisticas, administrativas y operativas.
+
+====================================================
+9. BENEFICIOS
+====================================================
+Formacion empresarial, fortalecimiento financiero, desarrollo comercial, marketing, portafolio comercial, salud mental, empoderamiento, habilidades blandas, incentivos productivos, seguimiento y mentoria.
+
+====================================================
+10. INCENTIVOS
+====================================================
+- Emprendimientos en funcionamiento: hasta $7.000.000
+- Ideas de negocio: hasta $4.000.000
+- Aplica para las 110 beneficiarias
+- No es promesa automatica; depende del proceso y planes de negocio
+
+====================================================
+11. REQUISITOS DE POSTULACION (18 requisitos)
+====================================================
+1. Ser mujer cuidadora de PcD o adulto mayor
+2. Tener entre 18 y 65 anos
+3. Sisben menor o igual a C18
+4. Certificado de la persona en condicion de discapacidad o adulto mayor
+5. Documento de identidad
+6. Historia clinica
+7. Declaracion juramentada de vinculo con PcD o adulto mayor
+8. Disposicion para todas las actividades
+9. Carta de aceptacion
+10. No haber sido beneficiaria de proyectos similares (4-5 anos)
+11. Declaracion juramentada sobre no haber sido beneficiaria
+12. Residir en municipios priorizados
+13. Copia del Sisben
+14. Certificado del presidente de JAC
+15. Acreditar titularidad o uso del inmueble
+16. Certificado de no alto riesgo del inmueble (Planeacion)
+17. Certificado de servicios publicos del inmueble
+18. Certificado autenticado de sostenibilidad del emprendimiento
+
+====================================================
+12. CRITERIOS DE PRIORIZACION
+====================================================
+- Cabeza de hogar: 20 pts / No cabeza de hogar: 10 pts
+- Sisben A: 20 pts / B: 15 pts / C: 10 pts
+- Emprendimiento funcionando: 20 pts / Idea de negocio: 10 pts
+- Sector rural: 20 pts / Urbano: 15 pts
+- Dos o mas personas al cuidado: 20 pts / Una persona: 10 pts
+- Puntaje maximo: 100 pts
+- Base de referencia: 70 pts
+
+====================================================
+13. ETAPAS DEL PROYECTO
+====================================================
+1. Promocion y socializacion
+2. Fortalecimiento de capacidades y competencias
+3. Entrega de incentivos productivos
+4. Seguimiento, monitoreo, mentoria y asesoria
+5. Logistica, administracion, cierre e informe final
+
+====================================================
+14. ESTADO DE FECHAS OFICIALES
+====================================================
+No hay fechas definidas. Las fechas seran publicadas cuando el equipo del proyecto las confirme. No inventar fechas.
+
+====================================================
+15. REGLA FUNDAMENTAL
+====================================================
+La pagina NO toma datos, NO almacena informacion, NO tiene formularios, NO tiene backend.
+
+====================================================
+16. PALETA DE COLORES
+====================================================
+- Morado oscuro: #522989
+- Morado claro: #C098FB
+- Lila fondo: #F5EEFF
+- Blanco calido: #FFFBF7
+- Fucsia acento: #D7197F
+- Texto oscuro: #2B2433
+- Gris texto: #625A6D
+- Borde suave: #E8DDF7
+- Exito: #3BAA75
+- Advertencia: #F6B84B
+
+====================================================
+17. TIPOGRAFIAS
+====================================================
+- Display: Cooper Black / Fraunces (titulos grandes, hero)
+- Heading: Fredoka (subtitulos, tarjetas, navegacion)
+- Body: Poppins (parrafos, textos largos)
+
+====================================================
+18. CODIGO DE FUENTES (en head de index.html)
+====================================================
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100..900&family=Fredoka:wght@300..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+====================================================
+19. ARQUITECTURA DE CARPETAS
+====================================================
+/
++-- index.html
++-- CONTEXTO_PROYECTO.txt
++-- css/
+|   +-- main.css (solo importaciones)
+|   +-- variables.css, fonts.css, reset.css, layout.css
+|   +-- header.css, hero.css, sections.css, cards.css
+|   +-- tables.css, buttons.css, placeholders.css
+|   +-- footer.css, responsive.css
++-- js/
+|   +-- main.js (solo inicializador)
+|   +-- navigation.js, smooth-scroll.js, ui-helpers.js
+|   +-- placeholders.js, table-utils.js
+|   +-- women-stories-table.js, project-updates-table.js
+|   +-- documentation-guard.js
++-- img/
+    +-- imgIA/ (imagenes temporales)
+
+====================================================
+20. FUNCION DE CADA CSS
+====================================================
+- variables.css: tokens de diseno
+- fonts.css: fuentes y jerarquia tipografica
+- reset.css: normalizacion del navegador
+- layout.css: contenedores, grids, utilidades
+- header.css: header sticky, nav, menu movil
+- hero.css: banner principal
+- sections.css: estilos por seccion
+- cards.css: tarjetas informativas
+- tables.css: tablas responsive
+- buttons.css: botones de navegacion interna
+- placeholders.css: secciones futuras
+- footer.css: footer institucional
+- responsive.css: media queries globales
+
+====================================================
+21. FUNCION DE CADA JS
+====================================================
+- main.js: inicializador de modulos
+- navigation.js: menu movil, scroll spy
+- smooth-scroll.js: scroll suave con offset
+- ui-helpers.js: utilidades DOM reutilizables
+- placeholders.js: logica de secciones placeholder
+- table-utils.js: utilidades para tablas externas (futuro)
+- women-stories-table.js: lectura futura de tabla de historias
+- project-updates-table.js: lectura futura de tabla de bitacora
+- documentation-guard.js: recordatorio en consola
+
+====================================================
+22. TABLAS EXTERNAS FUTURAS
+====================================================
+- women-stories-table.js leera la tabla de historias/perfiles
+- project-updates-table.js leera la tabla de avances/bitacora
+- Ambas tablas aun NO existen
+- Cuando se creen, documentar: URL, columnas, seccion, fecha
+
+====================================================
+23. TAMANOS DE IMAGENES
+====================================================
+Banner principal: 900x600px, WebP, 120-250KB
+Imagenes de apoyo: 800x600 o 600x600, WebP, <180KB
+Tarjetas futuras: 600x400, WebP, <150KB
+Iconos/logos: SVG preferido
+
+====================================================
+24. SECCIONES ACTUALES
+====================================================
+1. Header/navegacion
+2. Hero principal
+3. Presentacion del proyecto
+4. Objetivo general
+5. Objetivos especificos
+6. Poblacion beneficiaria
+7. Beneficios e incentivos
+8. Requisitos de postulacion
+9. Criterios de priorizacion
+10. Etapas del proyecto
+11. Fechas oficiales
+12. Historias de transformacion (placeholder)
+13. Bitacora del proyecto (placeholder)
+14. Footer/contacto
+
+====================================================
+25. SECCIONES FUTURAS PENDIENTES
+====================================================
+- Historias de transformacion: sera alimentada por women-stories-table.js
+- Bitacora del proyecto: sera alimentada por project-updates-table.js
+- Ninguna tiene datos reales aun
+
+====================================================
+26. REGLAS OBLIGATORIAS PARA EDICIONES FUTURAS
+====================================================
+- Revisar CONTEXTO_PROYECTO.txt antes de editar
+- Actualizar historial de cambios despues de cada edicion
+- No crear CSS/JS monoliticos
+- Todo CSS en css/, todo JS en js/
+- No mezclar responsabilidades entre archivos
+- No crear formularios, forms.css, inputs de datos
+- No almacenar datos (localStorage, cookies, backend)
+- No conectar Google Sheets hasta tener URLs definitivas
+- Documentar toda tabla externa integrada
+- Imagenes temporales en img/imgIA/
+- Mantener textos en espanol
+- Mantener responsive y accesible
+- main.css solo importa, main.js solo inicializa
+- No inventar fechas, cupos, montos ni requisitos
+
+====================================================
+27. HISTORIAL DE CAMBIOS
+====================================================
+[2026-04-29] Creacion inicial del proyecto completo:
+- Estructura de carpetas creada
+- 14 archivos CSS modulares creados
+- 9 archivos JS modulares creados
+- index.html con 14 secciones
+- Imagenes temporales generadas en img/imgIA/
+- CONTEXTO_PROYECTO.txt creado
+- Pagina responsive, accesible, sin formularios
+- Secciones futuras preparadas con placeholders
+====================================================

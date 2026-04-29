@@ -1,0 +1,71 @@
+/* ============================================
+   BUTTONS.CSS
+   Botones de navegación interna y enlaces
+   ============================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: var(--radius-xl);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--color-primary-light);
+    outline-offset: 3px;
+}
+
+/* Primario */
+.btn--primary {
+    background: linear-gradient(135deg, var(--color-primary), #6B3FA0);
+    color: var(--color-text-light);
+    box-shadow: 0 4px 15px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(var(--color-primary-rgb), 0.4);
+    color: var(--color-text-light);
+}
+
+/* Secundario */
+.btn--secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-border-soft);
+}
+
+.btn--secondary:hover {
+    background: var(--color-lila-bg);
+    border-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+/* Solo texto */
+.btn--ghost {
+    background: transparent;
+    color: var(--color-primary);
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+}
+
+.btn--ghost:hover {
+    color: var(--color-accent-fucsia);
+}
+
+.btn__arrow {
+    transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn__arrow {
+    transform: translateX(3px);
+}

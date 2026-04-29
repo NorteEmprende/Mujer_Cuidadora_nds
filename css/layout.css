@@ -1,0 +1,160 @@
+/* ============================================
+   LAYOUT.CSS
+   Sistema de layout, contenedores y utilidades
+   ============================================ */
+
+/* === Contenedor principal === */
+.container {
+    width: 100%;
+    max-width: var(--max-width-content);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+}
+
+.container--narrow {
+    max-width: var(--max-width-narrow);
+}
+
+.container--wide {
+    max-width: var(--max-width-wide);
+}
+
+/* === Sección base === */
+.section {
+    padding-top: var(--space-4xl);
+    padding-bottom: var(--space-4xl);
+}
+
+.section--alt {
+    background-color: var(--color-bg-section-alt);
+}
+
+.section--lila {
+    background-color: var(--color-lila-bg);
+}
+
+/* === Grid de dos columnas === */
+.grid-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+/* === Grid flexible === */
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+}
+
+.grid-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+/* === Flexbox utilities === */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* === Alineación de texto === */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* === Encabezado de sección === */
+.section__header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section__title {
+    margin-bottom: var(--space-md);
+    position: relative;
+    display: inline-block;
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent-fucsia));
+    border-radius: var(--radius-full);
+}
+
+.section__subtitle {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--color-text-gray);
+    margin-top: var(--space-lg);
+    line-height: 1.7;
+}
+
+/* === Separador decorativo === */
+.divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent-fucsia));
+    border: none;
+    border-radius: var(--radius-full);
+    margin: var(--space-xl) auto;
+}
+
+/* === Espaciado utilitario === */
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+.mt-2xl { margin-top: var(--space-2xl); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+
+@media (max-width: 768px) {
+    .grid-two-col {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .grid-three {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-top: var(--space-3xl);
+        padding-bottom: var(--space-3xl);
+    }
+
+    .container {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+}

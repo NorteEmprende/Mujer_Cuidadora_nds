@@ -1,0 +1,91 @@
+/* ============================================
+   FONTS.CSS
+   Definición de fuentes y jerarquía tipográfica
+   ============================================ */
+
+:root {
+    --font-display: 'Cooper Black', 'Fraunces', Georgia, serif;
+    --font-heading: 'Fredoka', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+/* === Jerarquía de títulos === */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    color: var(--color-text-dark);
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-weight: 600;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 500;
+}
+
+h4 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* === Texto base === */
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-dark);
+}
+
+p {
+    color: var(--color-text-gray);
+    margin-bottom: var(--space-md);
+}
+
+/* === Clases utilitarias de fuente === */
+.font-display {
+    font-family: var(--font-display);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-accent {
+    color: var(--color-accent-fucsia);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+strong, b {
+    font-weight: 600;
+}

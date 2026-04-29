@@ -1,0 +1,276 @@
+/* ============================================
+   CARDS.CSS
+   Tarjetas informativas para todas las secciones
+   ============================================ */
+
+/* === Tarjeta base === */
+.info-card {
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.info-card__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent-fucsia));
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+    flex-shrink: 0;
+}
+
+.info-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--color-text-dark);
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+}
+
+.info-card__text {
+    font-size: 0.92rem;
+    color: var(--color-text-gray);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* === Tarjeta de municipio === */
+.municipality-card {
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.municipality-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.municipality-card__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-full);
+    background: var(--color-lila-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+    font-size: 1.5rem;
+}
+
+.municipality-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+    margin-bottom: var(--space-xs);
+    font-weight: 500;
+}
+
+.municipality-card__count {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.municipality-card__label {
+    font-size: 0.8rem;
+    color: var(--color-text-gray);
+}
+
+.municipality-card--total {
+    background: linear-gradient(135deg, var(--color-primary), #6B3FA0);
+    border: none;
+    color: white;
+}
+
+.municipality-card--total .municipality-card__icon {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.municipality-card--total .municipality-card__name { color: rgba(255,255,255,0.85); }
+.municipality-card--total .municipality-card__count { color: white; }
+.municipality-card--total .municipality-card__label { color: rgba(255,255,255,0.75); }
+
+/* === Tarjeta de beneficio === */
+.benefit-card {
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.benefit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.benefit-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background: var(--color-lila-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.benefit-card__title {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    font-weight: 500;
+}
+
+/* === Tarjeta de requisito === */
+.requirement-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-sm);
+    transition: border-color var(--transition-fast);
+}
+
+.requirement-card:hover {
+    border-color: var(--color-primary-light);
+}
+
+.requirement-card__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary);
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.requirement-card__text {
+    font-size: 0.92rem;
+    color: var(--color-text-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.requirement-card__text ul {
+    margin-top: var(--space-sm);
+    padding-left: var(--space-lg);
+}
+
+.requirement-card__text ul li {
+    list-style: disc;
+    font-size: 0.88rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-gray);
+}
+
+/* === Tarjeta de etapa (timeline) === */
+.timeline-card {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: var(--space-2xl);
+}
+
+.timeline-card:last-child { padding-bottom: 0; }
+
+.timeline-card__marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.timeline-card__dot {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent-fucsia));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-card__line {
+    width: 2px;
+    flex: 1;
+    background: var(--color-border-soft);
+    min-height: 40px;
+}
+
+.timeline-card:last-child .timeline-card__line { display: none; }
+
+.timeline-card__content {
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    flex: 1;
+    transition: box-shadow var(--transition-base);
+}
+
+.timeline-card__content:hover { box-shadow: var(--shadow-card); }
+
+.timeline-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--color-text-dark);
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+}
+
+.timeline-card__text {
+    font-size: 0.92rem;
+    color: var(--color-text-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .timeline-card { gap: var(--space-md); }
+    .timeline-card__dot { width: 38px; height: 38px; font-size: 0.95rem; }
+}
