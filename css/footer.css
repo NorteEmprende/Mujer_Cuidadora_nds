@@ -74,6 +74,13 @@
     padding: var(--space-xs);
 }
 
+.site-footer__logo-img {
+    height: auto;
+    max-height: 90px;
+    max-width: 220px;
+    object-fit: contain;
+}
+
 /* Columnas de navegación */
 .site-footer__col h4 {
     font-family: var(--font-heading);
