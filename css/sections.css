@@ -214,7 +214,7 @@
 }
 
 /* Etapas */
-.etapas { background: linear-gradient(180deg, var(--color-lila-bg) 0%, var(--color-bg-white) 100%); }
+.etapas { background: linear-gradient(180deg, var(--color-bg-white) 0%, var(--color-lila-bg) 100%); }
 
 /* Fechas */
 .fechas { background-color: var(--color-bg-white); }
