@@ -4,7 +4,9 @@
    ============================================ */
 
 /* Presentación */
-.presentacion { background-color: var(--color-bg-white); }
+.presentacion {
+    background-color: var(--color-bg-white);
+}
 
 .presentacion__content {
     display: grid;
@@ -13,7 +15,10 @@
     align-items: center;
 }
 
-.presentacion__text p { font-size: 1.05rem; line-height: 1.8; }
+.presentacion__text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
 
 .presentacion__image {
     border-radius: var(--radius-lg);
@@ -21,7 +26,12 @@
     box-shadow: var(--shadow-lg);
 }
 
-.presentacion__image img { width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3; }
+.presentacion__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
 
 /* Objetivo general */
 .objetivo-general {
@@ -34,19 +44,26 @@
 .objetivo-general::before {
     content: '';
     position: absolute;
-    top: -100px; right: -100px;
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
     border-radius: 50%;
 }
 
-.objetivo-general .section__title { color: var(--color-text-light); }
-.objetivo-general .section__title::after { background: linear-gradient(90deg, var(--color-primary-light), rgba(255,255,255,0.6)); }
+.objetivo-general .section__title {
+    color: var(--color-text-light);
+}
+
+.objetivo-general .section__title::after {
+    background: linear-gradient(90deg, var(--color-primary-light), rgba(255, 255, 255, 0.6));
+}
 
 .objetivo-general__text {
     font-size: 1.15rem;
     line-height: 1.9;
-    color: rgba(255,255,255,0.92);
+    color: rgba(255, 255, 255, 0.92);
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
@@ -59,19 +76,27 @@
     content: '\201C';
     font-family: var(--font-display);
     font-size: 5rem;
-    color: rgba(255,255,255,0.12);
+    color: rgba(255, 255, 255, 0.12);
     position: absolute;
-    top: -10px; left: -10px;
+    top: -10px;
+    left: -10px;
     line-height: 1;
 }
 
 /* Objetivos específicos */
-.objetivos-especificos { background-color: var(--color-bg-white); }
+.objetivos-especificos {
+    background-color: var(--color-bg-white);
+}
 
 /* Población beneficiaria */
-.poblacion { background-color: var(--color-lila-bg); }
+.poblacion {
+    background-color: var(--color-lila-bg);
+}
 
-.poblacion__total { text-align: center; margin-bottom: var(--space-3xl); }
+.poblacion__total {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
 
 .poblacion__number {
     font-family: var(--font-display);
@@ -81,7 +106,11 @@
     margin-bottom: var(--space-sm);
 }
 
-.poblacion__label { font-family: var(--font-heading); font-size: 1.15rem; color: var(--color-text-gray); }
+.poblacion__label {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--color-text-gray);
+}
 
 .poblacion__description {
     max-width: 800px;
@@ -93,10 +122,22 @@
 }
 
 /* Beneficios e incentivos */
-.beneficios { background-color: var(--color-bg-white); }
-.beneficios__incentivos { margin-top: var(--space-3xl); }
-.beneficios__incentivos-header { text-align: center; margin-bottom: var(--space-xl); }
-.beneficios__incentivos-header h3 { color: var(--color-primary); }
+.beneficios {
+    background-color: var(--color-bg-white);
+}
+
+.beneficios__incentivos {
+    margin-top: var(--space-3xl);
+}
+
+.beneficios__incentivos-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.beneficios__incentivos-header h3 {
+    color: var(--color-primary);
+}
 
 .incentivo-card {
     display: flex;
@@ -110,7 +151,10 @@
     transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.incentivo-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.incentivo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
 
 .incentivo-card__amount {
     font-family: var(--font-display);
@@ -120,8 +164,16 @@
     flex-shrink: 0;
 }
 
-.incentivo-card__info h4 { color: var(--color-text-dark); margin-bottom: var(--space-xs); }
-.incentivo-card__info p { font-size: 0.9rem; color: var(--color-text-gray); margin: 0; }
+.incentivo-card__info h4 {
+    color: var(--color-text-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.incentivo-card__info p {
+    font-size: 0.9rem;
+    color: var(--color-text-gray);
+    margin: 0;
+}
 
 .beneficios__disclaimer {
     margin-top: var(--space-xl);
@@ -135,7 +187,9 @@
 }
 
 /* Requisitos */
-.requisitos { background-color: var(--color-lila-bg); }
+.requisitos {
+    background-color: var(--color-lila-bg);
+}
 
 .requisitos__aviso {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-fucsia) 100%);
@@ -149,7 +203,9 @@
     font-weight: 500;
 }
 
-.requisitos__group { margin-bottom: var(--space-2xl); }
+.requisitos__group {
+    margin-bottom: var(--space-2xl);
+}
 
 .requisitos__group-title {
     font-family: var(--font-heading);
@@ -161,7 +217,9 @@
 }
 
 /* Criterios de priorización */
-.priorizacion { background-color: var(--color-bg-white); }
+.priorizacion {
+    background-color: var(--color-bg-white);
+}
 
 .priorizacion__nota {
     max-width: 800px;
@@ -214,10 +272,14 @@
 }
 
 /* Etapas */
-.etapas { background: linear-gradient(180deg, var(--color-bg-white) 0%, var(--color-lila-bg) 100%); }
+.etapas {
+    background: linear-gradient(180deg, var(--color-bg-white) 0%, var(--color-lila-bg) 100%);
+}
 
 /* Fechas */
-.fechas { background-color: var(--color-bg-white); }
+.fechas {
+    background-color: var(--color-bg-white);
+}
 
 .fechas__notice {
     max-width: 700px;
@@ -229,12 +291,36 @@
     border-radius: var(--radius-lg);
 }
 
-.fechas__notice-icon { font-size: 2.5rem; margin-bottom: var(--space-md); }
-.fechas__notice p { font-size: 1.05rem; color: var(--color-text-gray); line-height: 1.7; margin: 0; }
+.fechas__notice-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.fechas__notice p {
+    font-size: 1.05rem;
+    color: var(--color-text-gray);
+    line-height: 1.7;
+    margin: 0;
+}
 
 @media (max-width: 768px) {
-    .presentacion__content { grid-template-columns: 1fr; }
-    .presentacion__image { max-width: 400px; margin: 0 auto; }
-    .incentivo-card { flex-direction: column; text-align: center; padding: var(--space-lg); }
-    .priorizacion__footer { flex-direction: column; align-items: center; }
+    .presentacion__content {
+        grid-template-columns: 1fr;
+    }
+
+    .presentacion__image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .incentivo-card {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-lg);
+    }
+
+    .priorizacion__footer {
+        flex-direction: column;
+        align-items: center;
+    }
 }
