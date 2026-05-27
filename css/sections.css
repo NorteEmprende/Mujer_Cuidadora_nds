@@ -85,12 +85,12 @@
 
 /* Objetivos específicos */
 .objetivos-especificos {
-    background-color: var(--color-bg-white);
+    background-color: var(--color-lila-bg);
 }
 
 /* Población beneficiaria */
 .poblacion {
-    background-color: var(--color-lila-bg);
+    background-color: var(--color-bg-white);
 }
 
 .poblacion__total {
@@ -123,7 +123,7 @@
 
 /* Beneficios e incentivos */
 .beneficios {
-    background-color: var(--color-bg-white);
+    background-color: var(--color-lila-bg);
 }
 
 .beneficios__incentivos {
@@ -188,7 +188,7 @@
 
 /* Requisitos */
 .requisitos {
-    background-color: var(--color-lila-bg);
+    background-color: var(--color-bg-white);
 }
 
 .requisitos__aviso {
@@ -203,17 +203,66 @@
     font-weight: 500;
 }
 
-.requisitos__group {
-    margin-bottom: var(--space-2xl);
+details.requisitos__group {
+    margin-bottom: var(--space-lg);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-white);
+    overflow: hidden;
+    transition: box-shadow var(--transition-base);
 }
 
-.requisitos__group-title {
+details.requisitos__group[open] {
+    box-shadow: var(--shadow-md);
+}
+
+summary.requisitos__group-title {
     font-family: var(--font-heading);
     font-size: 1.1rem;
     color: var(--color-primary);
-    margin-bottom: var(--space-lg);
-    padding-bottom: var(--space-sm);
-    border-bottom: 2px solid var(--color-border-soft);
+    padding: var(--space-lg) var(--space-xl);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    transition: background var(--transition-fast), color var(--transition-fast);
+    border: none;
+    margin: 0;
+}
+
+summary.requisitos__group-title::-webkit-details-marker {
+    display: none;
+}
+
+summary.requisitos__group-title::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    transform: rotate(45deg);
+    transition: transform var(--transition-base);
+    flex-shrink: 0;
+    margin-left: var(--space-md);
+}
+
+details.requisitos__group[open] > summary.requisitos__group-title::after {
+    transform: rotate(-135deg);
+}
+
+summary.requisitos__group-title:hover {
+    background: rgba(var(--color-primary-rgb), 0.04);
+}
+
+details.requisitos__group[open] > summary.requisitos__group-title {
+    background: rgba(var(--color-primary-rgb), 0.06);
+    border-bottom: 1px solid var(--color-border-soft);
+}
+
+.requisitos__group-content {
+    padding: var(--space-md) var(--space-xl) var(--space-lg);
 }
 
 /* Criterios de priorización */
@@ -273,12 +322,12 @@
 
 /* Etapas */
 .etapas {
-    background: linear-gradient(180deg, var(--color-bg-white) 0%, var(--color-lila-bg) 100%);
+    background-color: var(--color-lila-bg);
 }
 
 /* Fechas */
 .fechas {
-    background-color: var(--color-bg-white);
+    background-color: var(--color-lila-bg);
 }
 
 .fechas__notice {

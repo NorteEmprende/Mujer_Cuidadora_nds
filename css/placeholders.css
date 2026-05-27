@@ -4,12 +4,12 @@
    ============================================ */
 
 .placeholder-section {
-    background-color: var(--color-bg-white);
+    background-color: var(--color-lila-bg);
     position: relative;
 }
 
 .placeholder-section--alt {
-    background-color: var(--color-bg-section-alt);
+    background-color: var(--color-bg-white);
 }
 
 .placeholder-section__container {

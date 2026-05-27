@@ -4,7 +4,7 @@
    ============================================ */
 
 .formularios {
-    background: linear-gradient(180deg, var(--color-bg-white) 0%, var(--color-lila-bg) 50%, var(--color-bg-white) 100%);
+    background-color: var(--color-bg-white);
     position: relative;
     overflow: hidden;
 }

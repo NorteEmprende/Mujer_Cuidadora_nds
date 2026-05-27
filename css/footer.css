@@ -86,6 +86,7 @@
     max-height: 90px;
     max-width: 220px;
     object-fit: contain;
+    border-radius: var(--radius-md);
 }
 
 /* Columnas de navegación */
