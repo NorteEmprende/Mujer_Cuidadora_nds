@@ -36,12 +36,10 @@
 .site-footer__logo-icon {
     width: 36px;
     height: 36px;
-    background: rgba(255,255,255,0.15);
+    background: #e5d9f2; /* Color claro tipo lila */
     border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
+    object-fit: contain;
+    padding: 4px;
 }
 
 .site-footer__desc {
