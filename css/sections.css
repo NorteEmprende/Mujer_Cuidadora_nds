@@ -320,14 +320,19 @@ details.requisitos__group[open] > summary.requisitos__group-title {
     opacity: 0.85;
 }
 
+/* Documentos */
+.documentos {
+    background-color: var(--color-lila-bg);
+}
+
 /* Etapas */
 .etapas {
-    background-color: var(--color-lila-bg);
+    background-color: var(--color-bg-white);
 }
 
 /* Fechas */
 .fechas {
-    background-color: var(--color-lila-bg);
+    background-color: var(--color-bg-white);
 }
 
 .fechas__notice {
