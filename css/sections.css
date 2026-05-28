@@ -248,7 +248,7 @@ summary.requisitos__group-title::after {
     margin-left: var(--space-md);
 }
 
-details.requisitos__group[open] > summary.requisitos__group-title::after {
+details.requisitos__group[open]>summary.requisitos__group-title::after {
     transform: rotate(-135deg);
 }
 
@@ -256,7 +256,7 @@ summary.requisitos__group-title:hover {
     background: rgba(var(--color-primary-rgb), 0.04);
 }
 
-details.requisitos__group[open] > summary.requisitos__group-title {
+details.requisitos__group[open]>summary.requisitos__group-title {
     background: rgba(var(--color-primary-rgb), 0.06);
     border-bottom: 1px solid var(--color-border-soft);
 }
@@ -327,7 +327,7 @@ details.requisitos__group[open] > summary.requisitos__group-title {
 
 /* Etapas */
 .etapas {
-    background-color: var(--color-bg-white);
+    background-color: var(--color-lila-bg);
 }
 
 /* Fechas */
