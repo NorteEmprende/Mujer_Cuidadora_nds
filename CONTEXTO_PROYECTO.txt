@@ -1,4 +1,4 @@
-﻿====================================================
+====================================================
 CONTEXTO_PROYECTO.txt
 GUIA INTERNA PARA FUTURAS EDICIONES CON IA
 ====================================================
@@ -157,19 +157,31 @@ La pagina NO toma datos, NO almacena informacion, NO tiene formularios, NO tiene
 ====================================================
 /
 +-- index.html
++-- bitacora.html (Bitacora dinamica desde CSV)
++-- manos-que-cuidan.html (galeria audiovisual, antes bitacora.html)
 +-- CONTEXTO_PROYECTO.txt
 +-- css/
 |   +-- main.css (solo importaciones)
 |   +-- variables.css, fonts.css, reset.css, layout.css
 |   +-- header.css, hero.css, sections.css, cards.css
 |   +-- tables.css, buttons.css, placeholders.css
-|   +-- footer.css, responsive.css
+|   +-- formularios.css, media-cuidadora.css
+|   +-- bitacora.css (estilos de la Bitacora dinamica)
+|   +-- footer.css, whatsapp.css, responsive.css
 +-- js/
 |   +-- main.js (solo inicializador)
 |   +-- navigation.js, smooth-scroll.js, ui-helpers.js
 |   +-- placeholders.js, table-utils.js
 |   +-- women-stories-table.js, project-updates-table.js
-|   +-- documentation-guard.js
+|   +-- documentation-guard.js, whatsapp.js
+|   +-- media-cuidadora-config.js, media-cuidadora-data.js
+|   +-- media-cuidadora-utils.js, media-cuidadora-modal.js
+|   +-- media-cuidadora.js
+|   +-- bitacora-config.js (configuracion Bitacora CSV)
+|   +-- bitacora-data.js (carga y parseo de CSV)
+|   +-- bitacora-card.js (tarjetas con carrusel)
+|   +-- bitacora-modal.js (modal de detalle con galeria)
+|   +-- bitacora.js (inicializador preview y pagina completa)
 +-- img/
     +-- imgIA/ (imagenes temporales)
 
@@ -180,28 +192,43 @@ La pagina NO toma datos, NO almacena informacion, NO tiene formularios, NO tiene
 - fonts.css: fuentes y jerarquia tipografica
 - reset.css: normalizacion del navegador
 - layout.css: contenedores, grids, utilidades
-- header.css: header sticky, nav, menu movil
+- header.css: header sticky, nav, menu hamburguesa (siempre desplegable)
 - hero.css: banner principal
 - sections.css: estilos por seccion
 - cards.css: tarjetas informativas
 - tables.css: tablas responsive
 - buttons.css: botones de navegacion interna
 - placeholders.css: secciones futuras
+- formularios.css: estilos de formularios externos
+- media-cuidadora.css: galeria audiovisual "Manos que cuidan"
+- bitacora.css: tarjetas, carrusel, modal y filtro de la Bitacora dinamica
 - footer.css: footer institucional
+- whatsapp.css: boton flotante de WhatsApp
 - responsive.css: media queries globales
 
 ====================================================
 21. FUNCION DE CADA JS
 ====================================================
 - main.js: inicializador de modulos
-- navigation.js: menu movil, scroll spy
-- smooth-scroll.js: scroll suave con offset
+- navigation.js: menu hamburguesa, scroll spy
+- smooth-scroll.js: scroll suave con offset, soporte cross-page y hash
 - ui-helpers.js: utilidades DOM reutilizables
 - placeholders.js: logica de secciones placeholder
 - table-utils.js: utilidades para tablas externas (futuro)
 - women-stories-table.js: lectura futura de tabla de historias
-- project-updates-table.js: lectura futura de tabla de bitacora
+- project-updates-table.js: lectura futura de tabla de avances
 - documentation-guard.js: recordatorio en consola
+- whatsapp.js: boton flotante de WhatsApp
+- media-cuidadora-config.js: configuracion de la seccion "Manos que cuidan"
+- media-cuidadora-data.js: carga CSV de galeria audiovisual
+- media-cuidadora-utils.js: parser CSV robusto, extraccion de IDs Drive/YouTube
+- media-cuidadora-modal.js: modal de video de la galeria
+- media-cuidadora.js: inicializador de la galeria "Manos que cuidan"
+- bitacora-config.js: configuracion de la Bitacora dinamica (URL CSV, fallback)
+- bitacora-data.js: carga y parseo del CSV de noticias
+- bitacora-card.js: generacion de tarjetas con carrusel de imagenes
+- bitacora-modal.js: modal de detalle con galeria de imagenes
+- bitacora.js: inicializador preview (index) y pagina completa (bitacora.html)
 
 ====================================================
 22. TABLAS EXTERNAS FUTURAS
@@ -222,7 +249,7 @@ Iconos/logos: SVG preferido
 ====================================================
 24. SECCIONES ACTUALES
 ====================================================
-1. Header/navegacion
+1. Header/navegacion (menu hamburguesa siempre desplegable)
 2. Hero principal
 3. Presentacion del proyecto
 4. Objetivo general
@@ -234,15 +261,29 @@ Iconos/logos: SVG preferido
 10. Etapas del proyecto
 11. Fechas oficiales
 12. Historias de transformacion (placeholder)
-13. Bitacora del proyecto (placeholder)
-14. Footer/contacto
+13. Manos que cuidan, manos que crean (galeria audiovisual)
+14. Bitacora de Mujeres Emprendedoras (noticias dinamicas desde CSV)
+15. Footer/contacto
 
 ====================================================
 25. SECCIONES FUTURAS PENDIENTES
 ====================================================
 - Historias de transformacion: sera alimentada por women-stories-table.js
-- Bitacora del proyecto: sera alimentada por project-updates-table.js
 - Ninguna tiene datos reales aun
+
+====================================================
+25b. TABLAS EXTERNAS INTEGRADAS
+====================================================
+- Bitacora de Mujeres Emprendedoras:
+  URL: https://docs.google.com/spreadsheets/d/e/2PACX-1vT1C-2wr-HTABxE7sgiu9JPubdnDoZ4UKyPE3PN9pIqozjHRV0MU861z10V-r24bXf7dl1XIlN0y-8j/pub?gid=1093743685&single=true&output=csv
+  Columnas: Marca temporal, Titulo, Municipio, Descripcion, Foto principal, Fecha, Num fotos, Foto 2-5
+  Seccion: #bitacora en index.html, pagina completa bitacora.html
+  Integrada: 2026-07-08
+- Galeria audiovisual "Manos que cuidan":
+  URL: CSV de Google Sheets (ver media-cuidadora-config.js)
+  Columnas: Timestamp, Fecha, Titulo, Descripcion, Video URL, Thumbnail, Formato
+  Seccion: #manos-que-cuidan en index.html, pagina completa manos-que-cuidan.html
+  Integrada: previamente
 
 ====================================================
 26. REGLAS OBLIGATORIAS PARA EDICIONES FUTURAS
@@ -274,4 +315,17 @@ Iconos/logos: SVG preferido
 - CONTEXTO_PROYECTO.txt creado
 - Pagina responsive, accesible, sin formularios
 - Secciones futuras preparadas con placeholders
+
+[2026-07-08] Integracion de nueva Bitacora dinamica:
+- Se creo nueva seccion Bitacora alimentada desde CSV publicado de Google Sheets.
+- Se implemento carga dinamica de tarjetas, filtro por municipio y modal con galeria de imagenes.
+- Se renombro la antigua seccion Bitacora como "Manos que cuidan, manos que crean".
+- Se creo la pagina manos-que-cuidan.html para la galeria audiovisual.
+- Se reemplazo bitacora.html con la nueva pagina dinamica de Bitacora.
+- Se ajusto la navegacion: menu hamburguesa siempre visible (desktop y movil).
+- Se corrigio comportamiento sticky del header en todas las paginas.
+- Se mejoro smooth-scroll.js con soporte cross-page y ajuste al cargar con hash.
+- Se actualizaron textos de media-cuidadora.js para no confundir con la nueva Bitacora.
+- Archivos nuevos: bitacora-config.js, bitacora-data.js, bitacora-card.js, bitacora-modal.js, bitacora.js, bitacora.css, manos-que-cuidan.html
+- Archivos modificados: index.html, main.js, main.css, header.css, smooth-scroll.js, media-cuidadora.js, media-cuidadora-utils.js
 ====================================================

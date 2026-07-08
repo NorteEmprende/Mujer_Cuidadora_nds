@@ -10,6 +10,7 @@ import { initDocumentationGuard } from './documentation-guard.js';
 import { initScrollAnimations } from './ui-helpers.js';
 import { initWhatsApp } from './whatsapp.js';
 import { initMujerCuidadoraMedia } from './media-cuidadora.js';
+import { initBitacoraPreview, initBitacoraPage } from './bitacora.js';
 
 /**
  * Inicialización principal al cargar el DOM
@@ -19,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initPlaceholders();
     initMujerCuidadoraMedia();
+    initBitacoraPreview();
+    initBitacoraPage();
     initScrollAnimations();
     initDocumentationGuard();
     initWhatsApp();

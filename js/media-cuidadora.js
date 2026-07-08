@@ -65,7 +65,7 @@ function renderLoading(container) {
             <div class="cuidadora-media-state__icon">
                 <span class="material-symbols-outlined" aria-hidden="true">hourglass_empty</span>
             </div>
-            <p>Cargando bitácora del proyecto...</p>
+            <p>Cargando galería del proyecto...</p>
         </div>
     `;
 }
@@ -79,8 +79,8 @@ function renderEmptyState(container) {
             <div class="cuidadora-media-state__icon">
                 <span class="material-symbols-outlined" aria-hidden="true">video_library</span>
             </div>
-            <h3>Bitácora en preparación</h3>
-            <p>Aún no hay videos o noticias disponibles para la bitácora del proyecto.</p>
+            <h3>Galería en preparación</h3>
+            <p>Aún no hay videos o noticias disponibles para esta sección.</p>
         </div>
     `;
 }
@@ -94,7 +94,7 @@ function renderErrorState(container) {
             <div class="cuidadora-media-state__icon">
                 <span class="material-symbols-outlined" aria-hidden="true">error</span>
             </div>
-            <h3>No pudimos cargar la bitácora</h3>
+            <h3>No pudimos cargar la galería</h3>
             <p>Por favor intenta nuevamente más tarde.</p>
         </div>
     `;
@@ -134,8 +134,8 @@ function prepareContainer(container) {
 function buildViewAllButton() {
     return `
         <div class="cuidadora-media-actions">
-            <a href="bitacora.html" class="btn btn--primary">
-                Ver toda la bitácora
+            <a href="manos-que-cuidan.html" class="btn btn--primary">
+                Ver Manos que cuidan
                 <span class="btn__arrow">&rarr;</span>
             </a>
         </div>
