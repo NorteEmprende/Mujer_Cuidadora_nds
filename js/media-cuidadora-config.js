@@ -3,7 +3,7 @@
  * Configuración del módulo dinámico de Bitácora del proyecto.
  */
 
-export const MUJER_CUIDADORA_MEDIA_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS33BPFo7F4KzE3NknoEpKfzTjb5EjeUR1svAlMf8a6Wh-NgFPhKAJzojCJG5qdiLyWw0eSOpFCwG2G/pub?gid=1170999841&single=true&output=csv';
+export const MUJER_CUIDADORA_MEDIA_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQfvjx6-TH8Tnd_C-4KFk5mTpJmPJLC8zexCDOw02QwHQQuo6iOuMcv6R0DQGgdhCc-dSihxdqTsrEL/pub?gid=1168913486&single=true&output=csv';
 
 export const MUJER_CUIDADORA_FALLBACK_IMAGE = 'img/logo_sin_fondo.png';
 
