@@ -13,7 +13,6 @@ html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     scroll-padding-top: var(--header-height);
-    overflow-x: hidden;
 }
 
 body {
@@ -21,7 +20,6 @@ body {
     background-color: var(--color-warm-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
 }
 
 img, picture, video, canvas, svg {

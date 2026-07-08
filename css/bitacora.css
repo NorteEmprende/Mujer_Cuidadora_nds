@@ -357,6 +357,7 @@
 .bitacora-hero p {
     font-family: var(--font-body);
     font-size: 1.1rem;
+    color: #fff;
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto var(--space-xl);
