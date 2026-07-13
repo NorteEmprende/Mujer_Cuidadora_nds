@@ -594,7 +594,7 @@
             </div>
         </section>
 
-        <!-- HISTORIAS DE TRANSFormación (futura) -->
+        <!-- HISTORIAS DE TRANSFORMACIÓN (dinámico, CSV) -->
         <section class="section placeholder-section placeholder-section--alt" id="historias"
             aria-label="Historias de transformación">
             <div class="container">
@@ -602,16 +602,13 @@
                     <h2 class="section__title">Historias de transformación</h2>
                     <p class="section__subtitle">Mujeres que cuidan, emprenden y construyen autonomía</p>
                 </div>
-                <div class="placeholder-section__container" id="historias-transformacion-placeholder">
-                    <div class="placeholder-section__image">
-                        <img src="img/mmmmm.jpeg" alt="Mujeres cuidadoras compartiendo experiencias en comunidad"
-                            width="600" height="400">
-                    </div>
-                    <div class="placeholder-section__notice">
-                        <span class="placeholder-section__notice-icon"><span
-                                class="material-symbols-outlined">edit_document</span></span>
-                        <p class="placeholder-section__notice-text">Esta sección será alimentada en una fase posterior
-                            con perfiles, relatos y emprendimientos de las mujeres beneficiarias del proyecto.</p>
+                <div class="placeholder-section__container" id="historias-container" data-historias-mode="preview"
+                    data-historias-limit="3" data-historias-show-cta="true">
+                    <div class="historias-state">
+                        <div class="historias-state__icon">
+                            <span class="material-symbols-outlined" aria-hidden="true">hourglass_empty</span>
+                        </div>
+                        <p>Cargando historias...</p>
                     </div>
                 </div>
             </div>
