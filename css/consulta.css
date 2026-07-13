@@ -1,0 +1,228 @@
+/* ============================================
+   CONSULTA TU RESULTADO
+   ============================================ */
+
+.consulta {
+    background: var(--color-bg-section-alt);
+    position: relative;
+    overflow: hidden;
+}
+
+.consulta::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -100px;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.consulta__card {
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-card);
+    position: relative;
+    z-index: 1;
+}
+
+/* === Formulario === */
+
+.consulta__field {
+    margin-bottom: var(--space-lg);
+}
+
+.consulta__label {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--color-text-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.consulta__input {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    background: var(--color-warm-white);
+    color: var(--color-text-dark);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.consulta__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.12);
+}
+
+.consulta__input[aria-invalid="true"] {
+    border-color: var(--color-warning);
+}
+
+.consulta__input:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.consulta__hint {
+    margin: var(--space-sm) 0 0;
+    font-size: 0.85rem;
+    color: var(--color-text-gray);
+}
+
+.consulta__error {
+    margin: var(--space-sm) 0 0;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #9A5B00;
+}
+
+.consulta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.consulta__submit {
+    position: relative;
+    min-width: 220px;
+    justify-content: center;
+}
+
+.consulta__submit:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.consulta__submit.is-loading {
+    padding-right: 2.75rem;
+}
+
+.consulta__submit.is-loading::after {
+    content: '';
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-top-color: #FFFFFF;
+    border-radius: 50%;
+    animation: consulta-spin 0.7s linear infinite;
+}
+
+@keyframes consulta-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* === Resultado === */
+
+.consulta__result {
+    margin-top: var(--space-xl);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--color-border-soft);
+    text-align: center;
+}
+
+.consulta__result:focus {
+    outline: none;
+}
+
+.consulta__result:focus-visible {
+    outline: 3px solid var(--color-primary-light);
+    outline-offset: 3px;
+}
+
+.consulta__result-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 1.8rem;
+    background: var(--color-lila-bg);
+    color: var(--color-primary);
+}
+
+.consulta__result-title {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text-dark);
+}
+
+.consulta__result-text {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text-gray);
+    line-height: 1.7;
+}
+
+.consulta__result-text:last-child {
+    margin-bottom: 0;
+}
+
+.consulta__result--success {
+    background: rgba(59, 170, 117, 0.06);
+    border-color: rgba(59, 170, 117, 0.35);
+}
+
+.consulta__result--success .consulta__result-icon {
+    background: rgba(59, 170, 117, 0.14);
+    color: var(--color-success);
+}
+
+.consulta__result--neutral {
+    background: rgba(var(--color-primary-rgb), 0.04);
+    border-color: var(--color-border-soft);
+}
+
+.consulta__result--warning {
+    background: rgba(246, 184, 75, 0.1);
+    border-color: rgba(246, 184, 75, 0.45);
+}
+
+.consulta__result--warning .consulta__result-icon {
+    background: rgba(246, 184, 75, 0.2);
+    color: #9A5B00;
+}
+
+.consulta__result--error {
+    background: rgba(var(--color-accent-fucsia-rgb), 0.05);
+    border-color: rgba(var(--color-accent-fucsia-rgb), 0.35);
+}
+
+.consulta__result--error .consulta__result-icon {
+    background: rgba(var(--color-accent-fucsia-rgb), 0.14);
+    color: var(--color-accent-fucsia);
+}
+
+/* === Responsive === */
+
+@media (max-width: 768px) {
+    .consulta__card {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .consulta__submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .consulta__card {
+        padding: var(--space-lg) var(--space-md);
+    }
+}

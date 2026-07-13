@@ -167,12 +167,14 @@ La pagina NO toma datos, NO almacena informacion, NO tiene formularios, NO tiene
 |   +-- tables.css, buttons.css, placeholders.css
 |   +-- formularios.css, media-cuidadora.css
 |   +-- bitacora.css (estilos de la Bitacora dinamica)
+|   +-- historias.css (estilos de Historias de transformacion)
+|   +-- consulta.css (estilos de Consulta tu resultado)
 |   +-- footer.css, whatsapp.css, responsive.css
 +-- js/
 |   +-- main.js (solo inicializador)
 |   +-- navigation.js, smooth-scroll.js, ui-helpers.js
 |   +-- placeholders.js, table-utils.js
-|   +-- women-stories-table.js, project-updates-table.js
+|   +-- project-updates-table.js
 |   +-- documentation-guard.js, whatsapp.js
 |   +-- media-cuidadora-config.js, media-cuidadora-data.js
 |   +-- media-cuidadora-utils.js, media-cuidadora-modal.js
@@ -182,6 +184,11 @@ La pagina NO toma datos, NO almacena informacion, NO tiene formularios, NO tiene
 |   +-- bitacora-card.js (tarjetas con carrusel)
 |   +-- bitacora-modal.js (modal de detalle con galeria)
 |   +-- bitacora.js (inicializador preview y pagina completa)
+|   +-- historias-config.js, historias-data.js
+|   +-- historias-modal.js, historias.js
+|   +-- consulta-config.js (URLs CSV y alias de columna de documento)
+|   +-- consulta-data.js (carga, cache en memoria y logica de consulta)
+|   +-- consulta.js (inicializador de la seccion, UI y accesibilidad)
 +-- img/
     +-- imgIA/ (imagenes temporales)
 
@@ -202,6 +209,8 @@ La pagina NO toma datos, NO almacena informacion, NO tiene formularios, NO tiene
 - formularios.css: estilos de formularios externos
 - media-cuidadora.css: galeria audiovisual "Manos que cuidan"
 - bitacora.css: tarjetas, carrusel, modal y filtro de la Bitacora dinamica
+- historias.css: tarjetas y modal de Historias de transformacion
+- consulta.css: formulario y resultado de Consulta tu resultado
 - footer.css: footer institucional
 - whatsapp.css: boton flotante de WhatsApp
 - responsive.css: media queries globales
@@ -215,13 +224,12 @@ La pagina NO toma datos, NO almacena informacion, NO tiene formularios, NO tiene
 - ui-helpers.js: utilidades DOM reutilizables
 - placeholders.js: logica de secciones placeholder
 - table-utils.js: utilidades para tablas externas (futuro)
-- women-stories-table.js: lectura futura de tabla de historias
 - project-updates-table.js: lectura futura de tabla de avances
 - documentation-guard.js: recordatorio en consola
 - whatsapp.js: boton flotante de WhatsApp
 - media-cuidadora-config.js: configuracion de la seccion "Manos que cuidan"
 - media-cuidadora-data.js: carga CSV de galeria audiovisual
-- media-cuidadora-utils.js: parser CSV robusto, extraccion de IDs Drive/YouTube
+- media-cuidadora-utils.js: parser CSV robusto (reutilizado por historias y consulta), extraccion de IDs Drive/YouTube
 - media-cuidadora-modal.js: modal de video de la galeria
 - media-cuidadora.js: inicializador de la galeria "Manos que cuidan"
 - bitacora-config.js: configuracion de la Bitacora dinamica (URL CSV, fallback)
@@ -229,14 +237,19 @@ La pagina NO toma datos, NO almacena informacion, NO tiene formularios, NO tiene
 - bitacora-card.js: generacion de tarjetas con carrusel de imagenes
 - bitacora-modal.js: modal de detalle con galeria de imagenes
 - bitacora.js: inicializador preview (index) y pagina completa (bitacora.html)
+- historias-config.js: configuracion del CSV de Historias de transformacion
+- historias-data.js: carga y normalizacion de historias
+- historias-modal.js: modal de detalle de cada historia
+- historias.js: inicializador preview (index) y pagina completa (historias.html)
+- consulta-config.js: URLs de los dos CSV (seleccionadas y participantes) y alias de columna de documento
+- consulta-data.js: descarga, cachea en memoria (Set por sesion) y compara solo la columna de documento; nunca lee ni guarda otras columnas
+- consulta.js: inicializador de la seccion "Consulta tu resultado" - formulario, validacion, estados y accesibilidad
 
 ====================================================
 22. TABLAS EXTERNAS FUTURAS
 ====================================================
-- women-stories-table.js leera la tabla de historias/perfiles
-- project-updates-table.js leera la tabla de avances/bitacora
-- Ambas tablas aun NO existen
-- Cuando se creen, documentar: URL, columnas, seccion, fecha
+- project-updates-table.js leera la tabla de avances/bitacora (aun NO existe)
+- Cuando se cree, documentar: URL, columnas, seccion, fecha
 
 ====================================================
 23. TAMANOS DE IMAGENES
@@ -251,25 +264,26 @@ Iconos/logos: SVG preferido
 ====================================================
 1. Header/navegacion (menu hamburguesa siempre desplegable)
 2. Hero principal
-3. Presentacion del proyecto
-4. Objetivo general
-5. Objetivos especificos
-6. Poblacion beneficiaria
-7. Beneficios e incentivos
-8. Requisitos de postulacion
-9. Criterios de priorizacion
-10. Etapas del proyecto
-11. Fechas oficiales
-12. Historias de transformacion (placeholder)
-13. Manos que cuidan, manos que crean (galeria audiovisual)
-14. Bitacora de Mujeres Emprendedoras (noticias dinamicas desde CSV)
-15. Footer/contacto
+3. Consulta tu resultado (consulta por numero de documento, dos CSV)
+4. Presentacion del proyecto
+5. Objetivo general
+6. Objetivos especificos
+7. Poblacion beneficiaria
+8. Beneficios e incentivos
+9. Requisitos de postulacion
+10. Documentos para la postulacion
+11. Formularios de inscripcion
+12. Etapas del proyecto
+13. Historias de transformacion (dinamico, CSV)
+14. Manos que cuidan, manos que crean (galeria audiovisual)
+15. Bitacora de Mujeres Emprendedoras (noticias dinamicas desde CSV)
+16. Fechas oficiales
+17. Footer/contacto
 
 ====================================================
 25. SECCIONES FUTURAS PENDIENTES
 ====================================================
-- Historias de transformacion: sera alimentada por women-stories-table.js
-- Ninguna tiene datos reales aun
+- project-updates-table.js: sin seccion asociada aun
 
 ====================================================
 25b. TABLAS EXTERNAS INTEGRADAS
@@ -284,6 +298,19 @@ Iconos/logos: SVG preferido
   Columnas: Timestamp, Fecha, Titulo, Descripcion, Video URL, Thumbnail, Formato
   Seccion: #manos-que-cuidan en index.html, pagina completa manos-que-cuidan.html
   Integrada: previamente
+- Historias de transformacion:
+  URL: CSV de Google Sheets (ver historias-config.js)
+  Columnas: Marca temporal, Titulo de la historia, Cuerpo de la historia, Miniatura, Link del video, Formato del video
+  Seccion: #historias en index.html, pagina completa historias.html
+  Integrada: 2026-07-11
+- Consulta tu resultado (dos fuentes, con prioridad):
+  URL 1 (seleccionadas): https://docs.google.com/spreadsheets/d/e/2PACX-1vRF4Ue7GtLyW9PyT2wm-87JZ0zxXF7otmUf4fs28xElL8wZIWSiLWbtRfGPn6aiiA/pub?gid=293164081&single=true&output=csv
+  URL 2 (participantes generales): https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8NKnJOZvYiZjU55_guRhJCzJsU59r2DV1dlppLCPW_atTCFbWZ4vI7BuWjlDrlD7HPnZWVvKZnVp7/pub?gid=228573384&single=true&output=csv
+  Columna usada: numero de documento/cedula (deteccion por alias, ver consulta-config.js). Ninguna otra columna se lee ni se muestra.
+  Logica: se consulta primero la base de seleccionadas; solo si el documento no aparece ahi se consulta la de participantes. Si la primera fuente falla, no se consulta la segunda ni se concluye "no seleccionada": se muestra error general.
+  Seccion: #consulta en index.html (no tiene pagina propia, es solo formulario + resultado)
+  Privacidad: no se guarda el documento en localStorage/sessionStorage/cookies, no se imprime en consola, no se muestran otros datos de las filas del CSV.
+  Integrada: 2026-07-13
 
 ====================================================
 26. REGLAS OBLIGATORIAS PARA EDICIONES FUTURAS
@@ -293,7 +320,10 @@ Iconos/logos: SVG preferido
 - No crear CSS/JS monoliticos
 - Todo CSS en css/, todo JS en js/
 - No mezclar responsabilidades entre archivos
-- No crear formularios, forms.css, inputs de datos
+- No crear formularios, forms.css, inputs de datos, salvo instruccion explicita
+  del usuario con reglas de privacidad definidas (ver Consulta tu resultado,
+  seccion 25b): en ese caso el input solo se usa para comparar en memoria y
+  nunca se guarda ni se envia a terceros
 - No almacenar datos (localStorage, cookies, backend)
 - No conectar Google Sheets hasta tener URLs definitivas
 - Documentar toda tabla externa integrada
@@ -328,4 +358,24 @@ Iconos/logos: SVG preferido
 - Se actualizaron textos de media-cuidadora.js para no confundir con la nueva Bitacora.
 - Archivos nuevos: bitacora-config.js, bitacora-data.js, bitacora-card.js, bitacora-modal.js, bitacora.js, bitacora.css, manos-que-cuidan.html
 - Archivos modificados: index.html, main.js, main.css, header.css, smooth-scroll.js, media-cuidadora.js, media-cuidadora-utils.js
+
+[2026-07-11] Integracion de Historias de transformacion dinamica:
+- Se reemplazo el placeholder de "Historias de transformacion" por una seccion dinamica alimentada desde CSV.
+- Se creo la pagina historias.html para ver todas las historias, con modal de detalle (texto, imagen y/o video).
+- Se elimino women-stories-table.js (reemplazado por historias-config.js, historias-data.js, historias-modal.js, historias.js).
+- Archivos nuevos: historias-config.js, historias-data.js, historias-modal.js, historias.js, historias.css, historias.html
+- Archivos modificados: index.html, main.js, main.css, placeholders.js
+
+[2026-07-13] Integracion de "Consulta tu resultado" (consulta por documento):
+- Se agrego una seccion para que las participantes consulten, con su numero de documento, si fueron
+  seleccionadas beneficiarias del proyecto, sin exponer ningun otro dato personal.
+- Consulta dos CSV con prioridad: primero la base de seleccionadas y, solo si no aparece ahi, la base
+  general de participantes. Si la primera fuente falla no se concluye "no seleccionada".
+- De cada CSV solo se lee y conserva (en memoria, como Set normalizado) la columna de documento; el resto
+  de columnas se descarta al procesar el archivo y nunca llega a la interfaz.
+- El documento ingresado no se guarda en localStorage/sessionStorage/cookies, no se imprime en consola,
+  no se agrega a la URL y no se envia a servicios de terceros.
+- Se agrego el enlace "Consulta tu resultado" al menu principal y al footer, entre "Inicio" y "Presentacion".
+- Archivos nuevos: consulta-config.js, consulta-data.js, consulta.js, consulta.css
+- Archivos modificados: index.html, main.js, main.css
 ====================================================

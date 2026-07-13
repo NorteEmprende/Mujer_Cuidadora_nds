@@ -34,6 +34,8 @@
                 </button>
                 <ul class="site-nav__list" role="menubar">
                     <li role="none"><a href="#inicio" class="site-nav__link" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="#consulta" class="site-nav__link" role="menuitem">Consulta tu
+                            resultado</a></li>
                     <li role="none"><a href="#presentacion" class="site-nav__link" role="menuitem">Presentación</a></li>
                     <li role="none"><a href="#objetivos" class="site-nav__link" role="menuitem">Objetivos</a></li>
                     <li role="none"><a href="#beneficiarias" class="site-nav__link" role="menuitem">Beneficiarias</a>
@@ -97,6 +99,43 @@
                             <a href="#etapas" class="btn btn--secondary">Conocer etapas</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONSULTA DE RESULTADOS (documento, CSV) -->
+        <section class="section consulta" id="consulta" aria-label="Consulta tu resultado">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Consulta tu resultado</h2>
+                    <p class="section__subtitle">Ingresa tu número de documento para consultar el resultado de tu
+                        participación en el proyecto. La información ingresada será utilizada únicamente para
+                        realizar esta consulta.</p>
+                </div>
+
+                <div class="consulta__card">
+                    <form class="consulta__form" id="consulta-form" novalidate>
+                        <div class="consulta__field">
+                            <label for="consulta-documento" class="consulta__label">Número de documento</label>
+                            <input type="text" id="consulta-documento" name="documento" class="consulta__input"
+                                inputmode="numeric" autocomplete="off" maxlength="25" aria-required="true"
+                                aria-describedby="consulta-hint consulta-error">
+                            <p id="consulta-hint" class="consulta__hint">Escribe únicamente tu número de documento,
+                                sin nombres ni otros datos personales.</p>
+                            <p id="consulta-error" class="consulta__error" role="alert" hidden></p>
+                        </div>
+                        <div class="consulta__actions">
+                            <button type="submit" class="btn btn--primary consulta__submit" id="consulta-submit">
+                                <span class="consulta__submit-text">Consultar resultado</span>
+                            </button>
+                            <button type="button" class="btn btn--secondary" id="consulta-reset" hidden>
+                                Realizar una nueva consulta
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="consulta__result" id="consulta-result" role="status" aria-live="polite"
+                        tabindex="-1" hidden></div>
                 </div>
             </div>
         </section>
@@ -800,6 +839,7 @@
                     <h4>Navegación</h4>
                     <ul class="site-footer__nav-list">
                         <li><a href="#inicio" class="site-footer__nav-link">Inicio</a></li>
+                        <li><a href="#consulta" class="site-footer__nav-link">Consulta tu resultado</a></li>
                         <li><a href="#presentacion" class="site-footer__nav-link">Presentación</a></li>
                         <li><a href="#objetivos" class="site-footer__nav-link">Objetivos</a></li>
                         <li><a href="#beneficiarias" class="site-footer__nav-link">Beneficiarias</a></li>
