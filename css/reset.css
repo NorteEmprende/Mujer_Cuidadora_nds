@@ -13,10 +13,13 @@ html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     scroll-padding-top: var(--header-height);
+    overflow-x: hidden;
 }
 
 body {
     min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
     background-color: var(--color-warm-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
