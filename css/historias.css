@@ -1,0 +1,375 @@
+/* ============================================
+   HISTORIAS DE TRANSFORMACIÓN
+   ============================================ */
+
+.placeholder-section__container.historias-ready {
+    max-width: none;
+    text-align: left;
+}
+
+.historias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-xl);
+}
+
+.historia-card {
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.historia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-primary-light);
+}
+
+.historia-card:focus-visible {
+    outline: 3px solid var(--color-primary-light);
+    outline-offset: 4px;
+}
+
+.historia-card__thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-lila-bg);
+}
+
+.historia-card__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.historia-card:hover .historia-card__image {
+    transform: scale(1.06);
+}
+
+.historia-card__image.is-fallback {
+    object-fit: contain;
+    padding: var(--space-xl);
+    background: var(--color-warm-white);
+}
+
+.historia-card__content {
+    padding: var(--space-lg);
+}
+
+.historia-card__content h3 {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-size: 1.08rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.historia-card__content p {
+    margin: 0 0 var(--space-md);
+    color: var(--color-text-gray);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.historia-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.historia-card__cta .material-symbols-outlined {
+    font-size: 1.05rem;
+    transition: transform var(--transition-base);
+}
+
+.historia-card:hover .historia-card__cta .material-symbols-outlined {
+    transform: translateX(3px);
+}
+
+/* === Botón ver todas === */
+
+.historias-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-2xl);
+}
+
+/* === Estados (loading, vacío, error) === */
+
+.historias-state {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--space-2xl);
+    text-align: center;
+    background: var(--color-bg-white);
+    border: 2px dashed var(--color-border-soft);
+    border-radius: var(--radius-lg);
+    color: var(--color-text-gray);
+}
+
+.historias-state__icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-md);
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-full);
+    background: var(--color-lila-bg);
+    color: var(--color-primary);
+}
+
+.historias-state__icon .material-symbols-outlined {
+    font-size: 2rem;
+}
+
+.historias-state h3 {
+    color: var(--color-text-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.historias-state p {
+    margin: 0 0 var(--space-md);
+    line-height: 1.7;
+}
+
+.historias-state--error {
+    border-color: rgba(246, 184, 75, 0.5);
+}
+
+/* === Modal === */
+
+body.historia-modal-open {
+    overflow: hidden;
+}
+
+.historia-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    padding: var(--space-xl);
+    background: rgba(43, 36, 51, 0.88);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.historia-modal.is-open {
+    display: flex;
+}
+
+.historia-modal__content {
+    position: relative;
+    width: min(960px, 100%);
+    margin: auto;
+}
+
+.historia-modal__close {
+    position: absolute;
+    top: -52px;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--color-text-light);
+    cursor: pointer;
+    transition:
+        background var(--transition-base),
+        transform var(--transition-base);
+}
+
+.historia-modal__close:hover {
+    background: var(--color-primary);
+    transform: scale(1.05);
+}
+
+.historia-modal-layout {
+    width: 100%;
+}
+
+.story-video {
+    position: relative;
+    margin: 0 auto;
+    background: #000;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.story-video iframe,
+.story-video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    background: #000;
+}
+
+.story-video--horizontal {
+    width: min(920px, 92vw);
+    aspect-ratio: 16 / 9;
+}
+
+.story-video--vertical {
+    width: min(430px, 92vw);
+    max-height: calc(100vh - 220px);
+    aspect-ratio: 9 / 16;
+}
+
+.historia-modal-no-video {
+    width: min(480px, 92vw);
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-lg);
+    background: var(--color-lila-bg);
+    color: var(--color-primary);
+}
+
+.historia-modal-no-video .material-symbols-outlined {
+    font-size: 3rem;
+}
+
+.historia-modal-info {
+    max-width: 920px;
+    margin: var(--space-md) auto 0;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border-soft);
+    box-shadow: var(--shadow-lg);
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.historia-modal-info h3 {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    line-height: 1.35;
+}
+
+.historia-modal-body-text {
+    margin: 0;
+    color: var(--color-text-gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+/* === Navegación anterior/siguiente === */
+
+.historia-modal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.historia-modal-nav__btn {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--color-text-light);
+    cursor: pointer;
+    transition:
+        background var(--transition-base),
+        transform var(--transition-base);
+}
+
+.historia-modal-nav__btn:hover {
+    background: var(--color-primary);
+    transform: scale(1.08);
+}
+
+.historia-modal-nav__counter {
+    color: rgba(255, 255, 255, 0.82);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+}
+
+/* === Responsive === */
+
+@media (max-width: 768px) {
+    .historias-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .historia-modal {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .historia-modal__close {
+        top: -48px;
+        right: 0;
+    }
+
+    .story-video--horizontal {
+        width: 92vw;
+    }
+
+    .story-video--vertical {
+        width: min(390px, 92vw);
+        max-height: calc(100vh - 190px);
+    }
+
+    .historia-modal-info {
+        padding: var(--space-md);
+        max-height: 32vh;
+    }
+
+    .historias-state {
+        padding: var(--space-xl);
+    }
+}
+
+/* === Página completa de historias === */
+
+.historias-page {
+    padding-top: calc(var(--space-3xl) + 72px);
+    background:
+        radial-gradient(circle at top left, rgba(var(--color-primary-rgb), 0.08), transparent 32%),
+        var(--color-lila-bg);
+}
+
+.historias-page .section__header {
+    max-width: 760px;
+    margin: 0 auto var(--space-2xl);
+}
+
+.historias-page__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-lg);
+}

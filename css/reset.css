@@ -18,10 +18,11 @@ html {
 
 body {
     min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
     background-color: var(--color-warm-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
 }
 
 img, picture, video, canvas, svg {

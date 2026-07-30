@@ -35,6 +35,8 @@
                 <ul class="site-nav__list" role="menubar">
                     <li role="none"><a href="#inicio" class="site-nav__link" role="menuitem">Inicio</a></li>
                     <li role="none"><a href="#vacante" class="site-nav__link" role="menuitem">Vacante</a></li>
+                    <li role="none"><a href="#consulta" class="site-nav__link" role="menuitem">Consulta tu
+                            resultado</a></li>
                     <li role="none"><a href="#presentacion" class="site-nav__link" role="menuitem">Presentación</a></li>
                     <li role="none"><a href="#objetivos" class="site-nav__link" role="menuitem">Objetivos</a></li>
                     <li role="none"><a href="#beneficiarias" class="site-nav__link" role="menuitem">Beneficiarias</a>
@@ -45,6 +47,8 @@
                     <li role="none"><a href="#etapas" class="site-nav__link" role="menuitem">Etapas</a></li>
                     <li role="none"><a href="#formularios" class="site-nav__link" role="menuitem">Formularios</a></li>
                     <li role="none"><a href="#historias" class="site-nav__link" role="menuitem">Historias</a></li>
+                    <li role="none"><a href="#manos-que-cuidan" class="site-nav__link" role="menuitem">Manos que
+                            cuidan</a></li>
                     <li role="none"><a href="#bitacora" class="site-nav__link" role="menuitem">Bitácora</a></li>
                     <li role="none"><a href="#contacto" class="site-nav__link" role="menuitem">Contacto</a></li>
                 </ul>
@@ -134,6 +138,43 @@
                             mujercuidadoraemprender@gmail.com
                         </a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONSULTA DE RESULTADOS (documento, CSV) -->
+        <section class="section consulta" id="consulta" aria-label="Consulta tu resultado">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Consulta tu resultado</h2>
+                    <p class="section__subtitle">Ingresa tu número de documento para consultar el resultado de tu
+                        participación en el proyecto. La información ingresada será utilizada únicamente para
+                        realizar esta consulta.</p>
+                </div>
+
+                <div class="consulta__card">
+                    <form class="consulta__form" id="consulta-form" novalidate>
+                        <div class="consulta__field">
+                            <label for="consulta-documento" class="consulta__label">Número de documento</label>
+                            <input type="text" id="consulta-documento" name="documento" class="consulta__input"
+                                inputmode="numeric" autocomplete="off" maxlength="25" aria-required="true"
+                                aria-describedby="consulta-hint consulta-error">
+                            <p id="consulta-hint" class="consulta__hint">Escribe únicamente tu número de documento,
+                                sin nombres ni otros datos personales.</p>
+                            <p id="consulta-error" class="consulta__error" role="alert" hidden></p>
+                        </div>
+                        <div class="consulta__actions">
+                            <button type="submit" class="btn btn--primary consulta__submit" id="consulta-submit">
+                                <span class="consulta__submit-text">Consultar resultado</span>
+                            </button>
+                            <button type="button" class="btn btn--secondary" id="consulta-reset" hidden>
+                                Realizar una nueva consulta
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="consulta__result" id="consulta-result" role="status" aria-live="polite"
+                        tabindex="-1" hidden></div>
                 </div>
             </div>
         </section>
@@ -631,7 +672,7 @@
             </div>
         </section>
 
-        <!-- HISTORIAS DE TRANSFormación (futura) -->
+        <!-- HISTORIAS DE TRANSFORMACIÓN (dinámico, CSV) -->
         <section class="section placeholder-section placeholder-section--alt" id="historias"
             aria-label="Historias de transformación">
             <div class="container">
@@ -639,34 +680,28 @@
                     <h2 class="section__title">Historias de transformación</h2>
                     <p class="section__subtitle">Mujeres que cuidan, emprenden y construyen autonomía</p>
                 </div>
-                <div class="placeholder-section__container" id="historias-transformacion-placeholder">
-                    <div class="placeholder-section__image">
-                        <img src="img/mmmmm.jpeg" alt="Mujeres cuidadoras compartiendo experiencias en comunidad"
-                            width="600" height="400">
-                    </div>
-                    <div class="placeholder-section__notice">
-                        <span class="placeholder-section__notice-icon"><span
-                                class="material-symbols-outlined">edit_document</span></span>
-                        <p class="placeholder-section__notice-text">Esta sección será alimentada en una fase posterior
-                            con perfiles, relatos y emprendimientos de las mujeres beneficiarias del proyecto.</p>
+                <div class="placeholder-section__container" id="historias-container" data-historias-mode="preview"
+                    data-historias-limit="3" data-historias-show-cta="true">
+                    <div class="historias-state">
+                        <div class="historias-state__icon">
+                            <span class="material-symbols-outlined" aria-hidden="true">hourglass_empty</span>
+                        </div>
+                        <p>Cargando historias...</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bitácora DEL PROYECTO 
-        <section class="section placeholder-section" id="bitacora" aria-label="Bitácora del proyecto">
+
+        <section class="section placeholder-section" id="manos-que-cuidan"
+            aria-label="Manos que cuidan, manos que crean">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Bitácora del proyecto</h2>
+                    <h2 class="section__title">Manos que cuidan, manos que crean</h2>
                     <p class="section__subtitle">Avances, jornadas y momentos clave del proceso</p>
                 </div>
-                <div
-                    class="placeholder-section__container"
-                    id="bitacora-proyecto-placeholder"
-                    data-media-mode="preview"
-                    data-media-limit="4"
-                    data-media-show-cta="true">
+                <div class="placeholder-section__container" id="bitacora-proyecto-placeholder" data-media-mode="preview"
+                    data-media-limit="4" data-media-show-cta="true">
                     <div class="placeholder-section__notice">
                         <span class="placeholder-section__notice-icon"><span
                                 class="material-symbols-outlined">assignment</span></span>
@@ -677,17 +712,150 @@
                 </div>
             </div>
         </section>
-        (futura) -->
+
+        <!-- BITÁCORA DINÁMICA (CSV) -->
+        <section id="bitacora" class="section bitacora-preview-section" aria-label="Bitácora de Mujeres Emprendedoras">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">Bitácora</span>
+                    <h2>Bitácora de Mujeres Emprendedoras</h2>
+                    <p>
+                        Noticias, jornadas y momentos que documentan el avance del proyecto.
+                    </p>
+                </div>
+
+                <div id="bitacora-preview-grid" class="bitacora-grid">
+                    <p class="bitacora-status">Cargando bitácora...</p>
+                </div>
+
+                <div class="section-actions">
+                    <a href="bitacora.html" class="btn btn--primary">
+                        Ver toda la bitácora
+                        <span class="btn__arrow">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- FECHAS OFICIALES -->
         <section class="section fechas" id="fechas" aria-label="Fechas oficiales">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Fechas oficiales</h2>
+                    <h2 class="section__title">Fechas oficiales de socialización</h2>
+                    <p class="section__subtitle">Jornadas de socialización, inscripción y postulación en cada municipio
+                    </p>
                 </div>
-                <div class="fechas__notice">
-                    <div class="fechas__notice-icon"><span class="material-symbols-outlined">calendar_month</span></div>
-                    <p>Las fechas oficiales de socialización, inscripción y demás actividades serán publicadas cuando
-                        sean definidas por el equipo del proyecto.</p>
+                <div class="fechas__grid">
+                    <!-- Ocaña -->
+                    <div class="fecha-card">
+                        <div class="fecha-card__ribbon">Junio 2</div>
+                        <div class="fecha-card__header">
+                            <span class="material-symbols-outlined fecha-card__icon">location_on</span>
+                            <h3 class="fecha-card__municipio">Ocaña</h3>
+                        </div>
+                        <div class="fecha-card__body">
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">hotel</span>
+                                <span>Hotel Hacaritama</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                                <span>Martes 2 de junio</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>8:00 am a 6:00 pm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ragonvalia -->
+                    <div class="fecha-card">
+                        <div class="fecha-card__ribbon">Junio 2</div>
+                        <div class="fecha-card__header">
+                            <span class="material-symbols-outlined fecha-card__icon">location_on</span>
+                            <h3 class="fecha-card__municipio">Ragonvalia</h3>
+                        </div>
+                        <div class="fecha-card__body">
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">hotel</span>
+                                <span>Hotel San Manuelita</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                                <span>Martes 2 de junio</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>8:00 am a 6:00 pm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Chinácota -->
+                    <div class="fecha-card">
+                        <div class="fecha-card__ribbon">Junio 3</div>
+                        <div class="fecha-card__header">
+                            <span class="material-symbols-outlined fecha-card__icon">location_on</span>
+                            <h3 class="fecha-card__municipio">Chinácota</h3>
+                        </div>
+                        <div class="fecha-card__body">
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">hotel</span>
+                                <span>Hotel Islavita</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                                <span>Miércoles 3 de junio</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>8:00 am a 6:00 pm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Salazar -->
+                    <div class="fecha-card">
+                        <div class="fecha-card__ribbon">Junio 4</div>
+                        <div class="fecha-card__header">
+                            <span class="material-symbols-outlined fecha-card__icon">location_on</span>
+                            <h3 class="fecha-card__municipio">Salazar</h3>
+                        </div>
+                        <div class="fecha-card__body">
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">hotel</span>
+                                <span>Hotel Juana Naranja</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                                <span>Jueves 4 de junio</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>8:00 am a 6:00 pm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ábrego -->
+                    <div class="fecha-card">
+                        <div class="fecha-card__ribbon">Junio 5</div>
+                        <div class="fecha-card__header">
+                            <span class="material-symbols-outlined fecha-card__icon">location_on</span>
+                            <h3 class="fecha-card__municipio">Ábrego</h3>
+                        </div>
+                        <div class="fecha-card__body">
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">hotel</span>
+                                <span>Salón de eventos Los Alpes</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                                <span>Viernes 5 de junio</span>
+                            </div>
+                            <div class="fecha-card__detail">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>8:00 am a 6:00 pm</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -710,6 +878,7 @@
                     <h4>Navegación</h4>
                     <ul class="site-footer__nav-list">
                         <li><a href="#inicio" class="site-footer__nav-link">Inicio</a></li>
+                        <li><a href="#consulta" class="site-footer__nav-link">Consulta tu resultado</a></li>
                         <li><a href="#presentacion" class="site-footer__nav-link">Presentación</a></li>
                         <li><a href="#objetivos" class="site-footer__nav-link">Objetivos</a></li>
                         <li><a href="#beneficiarias" class="site-footer__nav-link">Beneficiarias</a></li>
@@ -740,6 +909,16 @@
                         <span class="site-footer__contact-icon"><span
                                 class="material-symbols-outlined">location_on</span></span>
                         <span>Norte de Santander, Colombia</span>
+                    </div>
+                    <div class="site-footer__contact-item">
+                        <span class="site-footer__contact-icon"><span
+                                class="material-symbols-outlined">thumb_up</span></span>
+                        <a href="https://www.facebook.com/profile.php?id=61567446975775" target="_blank" rel="noopener noreferrer" class="site-footer__nav-link">Facebook</a>
+                    </div>
+                    <div class="site-footer__contact-item">
+                        <span class="site-footer__contact-icon"><span
+                                class="material-symbols-outlined">photo_camera</span></span>
+                        <a href="https://www.instagram.com/mujerescuidadorasemprenden?igsh=MXdveDE2bzlyajhkMQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="site-footer__nav-link">Instagram</a>
                     </div>
                 </div>
             </div>

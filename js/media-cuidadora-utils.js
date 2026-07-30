@@ -138,7 +138,20 @@ export function extractDriveFileId(url = '') {
 }
 
 export function driveToDirectImageUrl(url = '') {
-    const fileId = extractDriveFileId(url);
+    const rawUrl = String(url ?? '').trim();
+
+    if (!rawUrl) {
+        return null;
+    }
+
+    if (
+        rawUrl.includes('lh3.googleusercontent.com') ||
+        rawUrl.includes('drive.google.com/thumbnail')
+    ) {
+        return rawUrl;
+    }
+
+    const fileId = extractDriveFileId(rawUrl);
 
     if (!fileId) {
         return null;
